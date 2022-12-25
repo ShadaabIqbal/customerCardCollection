@@ -11,7 +11,8 @@ const customerSchema = new mongoose.Schema({
     },
     mobileNumber: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     DOB: {
         type: String,
@@ -19,7 +20,9 @@ const customerSchema = new mongoose.Schema({
     },
     emailID: {
         type: String,
-        required: true
+        required: true,
+        unique: true
+
     },
     address: {
         type: String,
@@ -31,7 +34,8 @@ const customerSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        default: 'ACTIVE'
+        required: true,
+        uppercase: true
     }
 }, {timestamps: true})
 

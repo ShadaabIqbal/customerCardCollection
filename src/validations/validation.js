@@ -23,4 +23,8 @@ const isValidDate = function (Date) {
     return regex.test(Date)
 }
 
-module.exports = { isValidName, isValidPhone, isValidEmail, isValidDate }
+const isValidCardType = function (value) {
+    if(['REGULAR', 'SPECIAL'].includes(value)) {return false}
+}
+
+module.exports = { isValidName, isValidPhone, isValidEmail, isValidDate, isValidCardType }
